@@ -21,6 +21,14 @@ button.addEventListener ('click', function(){
     let inputmail = usermail.value;
     console.log(inputmail)
     //controlla che sia nella lista di chi può accedere
+    for (let i = 0; i < userlist.length; i++)
+
+if (inputmail == userlist[i]){
+    console.log("accesso consentito")
+} else {
+    console.log("accesso non consentito")
+}
+
 })
 
 
