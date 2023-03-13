@@ -34,5 +34,18 @@ if (inputmail == userlist[i]){
 }
 })
 
+/*Gioco dei dadi
 
-//stampa un messaggio appropriato
+Generare un numero random da 1 a 6,sia per il giocatore sia per il computer.
+
+
+Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
+
+let computernumber = Math.floor(Math.random() * 6) + 1;
+let usernumber = Math.floor(Math.random() * 6) + 1;
+
+console.log(`numero pc ${computernumber} numero utente ${usernumber}`)
+
+
+
+
