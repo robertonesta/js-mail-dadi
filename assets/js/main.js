@@ -43,16 +43,27 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 let computernumber = Math.floor(Math.random() * 6) + 1;
 let usernumber = Math.floor(Math.random() * 6) + 1;
+const diceEl = document.getElementById("dice")
 
 if (usernumber > computernumber) {
     console.log("hai vinto")
+    diceEl.innerHTML=(`Numero tuo ${usernumber} vs Numero del computer ${computernumber} = hai vinto`)
+
 } else if (usernumber == computernumber) {
     console.log("hai pareggiato") 
+    diceEl.innerHTML="hai pareggiato"
+    diceEl.innerHTML=(`Numero tuo ${usernumber} vs Numero del computer ${computernumber} = hai pareggiato`)
 } else {
-    console.log("hai perso");
+    console.log("hai perso")
+    diceEl.innerHTML="hai perso"
+    diceEl.innerHTML=(`Numero tuo ${usernumber} vs Numero del computer ${computernumber} = hai perso`);
 }
 
 console.log(`numero utente ${usernumber} numero pc ${computernumber} `)
+
+
+
+
 
 
 
