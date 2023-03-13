@@ -14,25 +14,32 @@ const userlist = [
 //prompt
 
 const usermail = document.getElementById("mail");
-const access = document.querySelector("div")
+const output = document.querySelector("div")
 const button = document.querySelector("button");
+
 
 button.addEventListener ('click', function(){
     let inputmail = usermail.value;
     console.log(inputmail)
+    let access = false;
+
     //controlla che sia nella lista di chi può accedere
-    for (let i = 0; i < userlist.length; i++)
+    for (let i = 0; i < userlist.length; i++) {
+        if (inputmail == userlist[i]) {
+            access = true;
+        }
+    }
+       
+    if (access){
+        console.log("accesso consentito");    
+        output.innerHTML = "accesso consentito"
 
-if (inputmail == userlist[i]){
-    console.log("accesso consentito")
-    i = userlist.length;    
-    access.innerHTML = "accesso consentito"
+    } else {
+        console.log("accesso non consentito")
+        output.innerHTML = "accesso non consentito"
+    }
 
-} else {
-    console.log("accesso non consentito")
-    access.innerHTML = "accesso non consentito"
-}
-})
+});
 
 /*Gioco dei dadi
 
