@@ -2,11 +2,11 @@
 
 //creare lista di chi può accedere
 const userlist = [
-  'luca@gmail.com',
-  'mario@gmail.com',
-  'fabrizio@gmail.com',
-  'roberto@gmail.com',
-  'lorenzo@gmail.com'
+  'luca@gmail.com', //0
+  'mario@gmail.com', //1
+  'fabrizio@gmail.com', //2
+  'roberto@gmail.com', //3
+  'lorenzo@gmail.com' //4
 ]
 
 
@@ -14,7 +14,7 @@ const userlist = [
 //prompt
 
 const usermail = document.getElementById("mail");
-
+const access = document.querySelector("div")
 const button = document.querySelector("button");
 
 button.addEventListener ('click', function(){
@@ -25,10 +25,13 @@ button.addEventListener ('click', function(){
 
 if (inputmail == userlist[i]){
     console.log("accesso consentito")
+    i = userlist.length;    
+    access.innerHTML = "accesso consentito"
+
 } else {
     console.log("accesso non consentito")
+    access.innerHTML = "accesso non consentito"
 }
-
 })
 
 
