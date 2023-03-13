@@ -44,7 +44,15 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 let computernumber = Math.floor(Math.random() * 6) + 1;
 let usernumber = Math.floor(Math.random() * 6) + 1;
 
-console.log(`numero pc ${computernumber} numero utente ${usernumber}`)
+if (usernumber > computernumber) {
+    console.log("hai vinto")
+} else if (usernumber == computernumber) {
+    console.log("hai pareggiato") 
+} else {
+    console.log("hai perso");
+}
+
+console.log(`numero utente ${usernumber} numero pc ${computernumber} `)
 
 
 
